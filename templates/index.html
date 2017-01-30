@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="hero-section">
+    <div class="container">
+      
+      <div class="section-content">
+
+        <a href="{{ url_for('signup') }}" class="btn-primary">Select a particular  stock </a>
+        <a href="{{ url_for('about') }}" class="btn-secondary">Learn more about this app</a> 
+      </div>
+
+      <div class="section-device">
+        <img src="static/img/statistics-706384__480.jpeg">
+      </div> 
+      
+      <div class="clearfix"></div>
+
+    </div>
+  </main>
+{% endblock %}

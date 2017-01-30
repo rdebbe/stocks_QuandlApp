@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="container signup-section">
+    <div class="section-content">
+      <h2>See difference between stocks </h2>
+
+      <form method="POST" action="/signup">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+          {{ form.stock_name.label }}
+
+          {% if form.stock_name.errors %}
+            {% for error in form.stock_name.errors %}
+              <p class="error-message">{{ error }}</p>
+            {% endfor %}
+          {% endif %}
+
+          {{ form.stock_name }}
+        </div>
+
+
+
+
+        {{ form.submit(class="btn-primary") }}
+      </form>
+    </div>
+  </main>
+{% endblock %}
